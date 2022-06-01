@@ -126,7 +126,7 @@ endif
 
 # Treat warnings as errors unless directed not to
 ifneq ($(WERROR),0)
-  CFLAGS += -Werror
+  CFLAGS += 
 endif
 
 ifndef DEBUG

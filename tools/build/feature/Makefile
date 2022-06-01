@@ -43,7 +43,7 @@ PKG_CONFIG := $(CROSS_COMPILE)pkg-config
 
 all: $(FILES)
 
-__BUILD = $(CC) $(CFLAGS) -Wall -Werror -o $(OUTPUT)$@ $(patsubst %.bin,%.c,$@) $(LDFLAGS)
+__BUILD = $(CC) $(CFLAGS) -Wall  -o $(OUTPUT)$@ $(patsubst %.bin,%.c,$@) $(LDFLAGS)
   BUILD = $(__BUILD) > $(OUTPUT)$(@:.bin=.make.output) 2>&1
 
 ###############################
@@ -132,10 +132,10 @@ test-libbfd.bin:
 	$(BUILD) -DPACKAGE='"perf"' -lbfd -lz -liberty -ldl
 
 test-liberty.bin:
-	$(CC) $(CFLAGS) -Wall -Werror -o $(OUTPUT)$@ test-libbfd.c -DPACKAGE='"perf"' $(LDFLAGS) -lbfd -ldl -liberty
+	$(CC) $(CFLAGS) -Wall  -o $(OUTPUT)$@ test-libbfd.c -DPACKAGE='"perf"' $(LDFLAGS) -lbfd -ldl -liberty
 
 test-liberty-z.bin:
-	$(CC) $(CFLAGS) -Wall -Werror -o $(OUTPUT)$@ test-libbfd.c -DPACKAGE='"perf"' $(LDFLAGS) -lbfd -ldl -liberty -lz
+	$(CC) $(CFLAGS) -Wall  -o $(OUTPUT)$@ test-libbfd.c -DPACKAGE='"perf"' $(LDFLAGS) -lbfd -ldl -liberty -lz
 
 test-cplus-demangle.bin:
 	$(BUILD) -liberty

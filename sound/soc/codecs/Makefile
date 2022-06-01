@@ -1,4 +1,4 @@
-subdir-ccflags-y += -Werror -I$(srctree)/drivers/misc/mediatek/include
+subdir-ccflags-y +=  -I$(srctree)/drivers/misc/mediatek/include
 
 ifeq ($(CONFIG_MTK_AUXADC),y)
 ccflags-y += -I$(srctree)/drivers/misc/mediatek/auxadc/
@@ -401,5 +401,5 @@ obj-$(CONFIG_SND_SOC_RT5509)	+= snd-soc-rt5509.o
 ifeq ($(CONFIG_SND_SOC_MT6358),y)
   # MTK Platform Support
   MTK_PLATFORM := $(subst ",,$(CONFIG_MTK_PLATFORM))
-  subdir-ccflags-y += -Werror -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/include
+  subdir-ccflags-y +=  -I$(srctree)/drivers/misc/mediatek/include/mt-plat/$(MTK_PLATFORM)/include
 endif

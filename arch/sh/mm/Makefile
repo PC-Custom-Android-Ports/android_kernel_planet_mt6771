@@ -69,4 +69,4 @@ CFLAGS_tlbex_64.o += -ffixed-r7 \
 	-ffixed-r60 -ffixed-r61 -ffixed-r62 \
 	-fomit-frame-pointer
 
-ccflags-y := -Werror
+ccflags-y := 

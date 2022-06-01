@@ -2,7 +2,7 @@
 # Makefile for trusty components
 #
 
-subdir-ccflags-y += -Werror
+subdir-ccflags-y += 
 
 obj-$(CONFIG_TRUSTY)		+= trusty.o
 obj-$(CONFIG_TRUSTY)		+= trusty-irq.o

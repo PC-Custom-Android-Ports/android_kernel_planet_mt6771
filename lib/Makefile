@@ -1,7 +1,7 @@
 #
 # Makefile for some libs needed in the kernel.
 #
-subdir-ccflags-y += -Werror
+subdir-ccflags-y += 
 
 ifdef CONFIG_FUNCTION_TRACER
 ORIG_CFLAGS := $(KBUILD_CFLAGS)
